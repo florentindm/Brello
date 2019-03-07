@@ -1,33 +1,203 @@
-.App {
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: #F3F3F3;
+}
+
+*{
+  list-style: none;
+}
+
+button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+#header{
+  position: fixed;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border-radius: 0.3em;
+  background-color:white;
+  color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 3.4em;
+  width: 100%;
+  top: 0;
 }
 
-.App-link {
-  color: #61dafb;
+#header > div{
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#header h1{
+  font-size: 1.4em;
+  line-height: 2.4em;
+}
+
+#content{
+  margin-top: 4em;
+  width: 100%;
+  display: flex;
+}
+
+.board{
+  display: flex;
+  margin-left: 1em;
+}
+
+.list{
+  width: 20em;
+  border-radius: 0.4em;
+  margin: 1em;
+}
+
+.list .head{
+  width:100%;
+  display: flex;
+}
+
+.list .title{
+  font-weight: 500;
+}
+
+.list .head .title{
+  margin-right: 1em;
+  font-size: 1.3em;
+}
+
+.list .head .actions{
+  width:10%;
+}
+
+.task {
+  position: relative;
+  display: flex;
+  background-color: white;
+  margin:1em 0;
+  border-radius: 0.4em;
+  padding: 0.7em 1.4em;
+  min-height: 3.5em;
+}
+
+.task p{
+  margin: 0;
+}
+
+
+.task .actions{
+  position: absolute;
+  right:1em;
+}
+.task .content{
+  margin: 0.3em 0em;
+}
+
+.inputtrigger{
+  background:transparent;
+  outline: none;
+  border: none;
+  font-style: italic;
+}
+
+.inputtrigger input{
+  margin: 0.2em;
+}
+
+.input-trigger-list{
+  background-color: rgb(230, 230, 230);
+  padding: 0.4em 0.9em;
+  border-radius: 0.2em;
+  min-height: 3.5em;
+  width: 20em;
+}
+
+.boardactions{
+  text-align: left;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.6em;
+  margin: auto;
+  height: 2.7em;
+}
+
+.boardactions > *{
+  display: inline-block;
+}
+
+.noarrow::after{
+    display:none;
+    background: none;
+    outline: none;
+}
+.noarrow{
+  background: none;
+  outline: none;
+  border:none;
+}
+
+.user{
+  position: absolute;
+  top:0;
+  right:1em;
+  bottom:0;
+  margin:auto;
+  text-align: right;
+}
+
+#useractions{
+  width: 2em;
+  display: inline-block;
+}
+
+#profile{
+  width: 2em;
+  display: inline-block;
+}
+
+#logo{
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  height:2em;
+  margin:auto;
+}
+
+#profile img{
+  height:2em;
+}
+
+#emptynotif{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 3em;
+  text-align: center;
+  font-size: 8em;
+  font-family: Roboto;
+  font-weight: 600;
+  color: #e6e6e6;
+  width: 72%;
+  line-height: 1em;
+}
+
+.dropdown-menu{
+  border:none;
+  font-size: 1.2em;
+  box-shadow: 1px 21px 214px -11px #00000026;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:focus,.btn:active:focus,.btn.active:focus,
+.btn.focus,.btn:active.focus,.btn.active.focus {
+    outline: none;
 }
